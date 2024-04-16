@@ -1,13 +1,105 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poor Story', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #61481C;
+  color: #fff;
+}
+
+h1{
+  font-family: 'Chewy', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 3rem;
+  text-align: center;
+}
+
+body, #root {
+  min-height: 100vh;
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+input, select {
+  margin: 0 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  opacity: 0.8;
+  font-family: 'Poor Story', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 24px;
+}
+
+.overall_layout {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  margin: 40px 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.display_background {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.title {
+  font-family: 'Chewy';
+  font-size: 70px;
+  color: #fff;
+  text-align: center;
+}
+
+.allButtons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+button {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Poor Story';
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  justify-self: center;
+}
+
+.context {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px 0 100px;
+}
+
+.img_size {
+  width: 400px;
+}
+
+.search-bar, .category-list, .year-bar {
+  position: absolute;
+  top: 250px;
+  left: 45%;
+}
+
+.category-list button, .year-input {
+  margin: 5px;
 }
