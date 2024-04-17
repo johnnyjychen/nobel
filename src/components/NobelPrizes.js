@@ -52,7 +52,7 @@ const NobelPrizes = () => {
     };
 
     const formatMotivation = (motivation) => {
-        if (!motivation) return "Sorry, there's no explanation about why they earned the award.";
+        if (!motivation) return "Sorry, there's no explanation about why they won the prize.";
         const cleanMotivation = motivation.replace(/^"|"$/g, '').trim();
         return `The reason they won the prize: ${cleanMotivation.charAt(0).toUpperCase() + cleanMotivation.slice(1)}${cleanMotivation.endsWith('.') ? '' : '.'}`;
     };
