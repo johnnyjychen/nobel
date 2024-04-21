@@ -24,6 +24,8 @@ const NobelPrizes = () => {
         localStorage.setItem('save', JSON.stringify(save));
     }, [save]);
 
+    // This part is about filtering the Nobel Prize winners
+    // It's triggered whenever the Nanm, Category, or Year is triggered.
     useEffect(() => {const isFilterApplied = Name || Category || Year;
         setHasFilter(isFilterApplied);
 
@@ -42,15 +44,18 @@ const NobelPrizes = () => {
         setFilteredWinners(results);
     }, [Name, Category, Year, nobelPrizeWinners]);
 
+    // add feature
     const addToSave = (laureate, category, year) => {
         const newFavorite = { ...laureate, category, year };
         setSave([...save, newFavorite]);
     };
 
+    // remove feature
     const removeFromSave = (id) => {
         setSave(save.filter(savedItem => savedItem.id !== id));
     };
 
+    // This function returns a sorry message or whatever it is in the JSON file.
     const formatMotivation = (motivation) => {
         if (!motivation) return "Sorry, there's no explanation about why they won the prize.";
         const cleanMotivation = motivation.replace(/^"|"$/g, '').trim();
@@ -94,6 +99,8 @@ const NobelPrizes = () => {
             </div>
 
             {/* Display filtered winners */}
+            {/* If there are results found, display the infomation and the Save button. */}
+            {/* In no results found, hasFilter applied. */}
             <div>
                 {filteredWinners.length > 0 ? (
                     filteredWinners.map((prize, index) => (
@@ -122,6 +129,7 @@ const NobelPrizes = () => {
             </div>
 
             {/* The save feature */}
+            {/* Display the info in order: name, year, category, and motivations. */}
             <h1 className='savedItem'>Saved</h1>
             <div>
                 {save.map((savedItem, index) => (
